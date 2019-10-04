@@ -1,7 +1,7 @@
 import heapq
 
 
-def merge(k, data):
+def merge(data):
     data = (ba[1:] for ba in data)
     heap = heapq.merge(*data)
     return heap
@@ -14,7 +14,7 @@ def read_data(k):
 
 def main():
     k = int(input())
-    result = merge(k, read_data(k))
+    result = merge(read_data(k))
     if result:
         for x in result:
             print(x, end=' ')
